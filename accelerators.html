@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The m-Platform Accelerators — Pinakam Proprietary IP</title>
+  <meta name="description" content="The Pinakam m-Platform: Seven proprietary delivery harnesses deployed by our consultants to eliminate infrastructure boilerplate and compress AI time-to-production." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero {
+      padding: calc(var(--nav-h) + 72px) 0 68px;
+      background: var(--slate-dark); color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 650px 420px at 90% 40%, rgba(0,192,243,.16) 0%, transparent 70%),
+        radial-gradient(ellipse 450px 320px at 10% 80%, rgba(3,78,162,.32) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .harness-detail {
+      display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: start;
+      padding: 84px 0; border-bottom: 1px solid var(--slate-border);
+    }
+    .harness-detail:last-of-type { border-bottom: none; }
+    .harness-meta { position: sticky; top: calc(var(--nav-h) + 24px); }
+    .harness-number {
+      font-family: var(--font-mono); font-size: 3.8rem; font-weight: 700;
+      color: var(--slate-border); line-height: 1; margin-bottom: 8px;
+    }
+    .harness-title {
+      font-family: var(--font-head); font-size: 2.6rem; font-weight: 800;
+      color: var(--slate-dark); line-height: 1.1; margin-bottom: 10px;
+    }
+    .harness-title span { color: var(--card-color, var(--cobalt)); }
+    .harness-subtitle {
+      font-size: .84rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+      color: var(--slate-muted); margin-bottom: 16px; display: block;
+    }
+    .harness-summary {
+      font-size: 1rem; color: var(--slate-muted); line-height: 1.75; margin-bottom: 24px;
+    }
+    .engagement-context-box {
+      background: var(--slate-dark); color: var(--white);
+      border-radius: var(--r-md); padding: 24px; margin-top: 24px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .engagement-context-box h4 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 700; margin-bottom: 6px;
+      color: var(--cyan);
+    }
+    .engagement-context-box p {
+      font-size: .85rem; color: rgba(255,255,255,.68); line-height: 1.6;
+    }
+    .capabilities-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px;
+    }
+    .capability-card {
+      background: var(--off-white); border: 1px solid var(--slate-border);
+      border-radius: var(--r-sm); padding: 18px 20px;
+    }
+    .capability-card h5 {
+      font-size: .92rem; font-weight: 700; color: var(--slate-dark); margin-bottom: 5px;
+    }
+    .capability-card p {
+      font-size: .82rem; color: var(--slate-muted); line-height: 1.55;
+    }
+
+    @media (max-width: 1024px) {
+      .harness-detail { grid-template-columns: 1fr; gap: 36px; }
+      .harness-meta { position: static; }
+      .capabilities-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg>
+        </div>
+        <span class="logo-text">PINAKA<span>M</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="consulting.html">Consulting Practices</a></li>
+        <li><a href="accelerators.html" class="active">Proprietary Accelerators <span class="nav-badge">m-platform</span></a></li>
+        <li><a href="about.html">About & Depth</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:.86rem; padding:10px 22px;">Book Discovery Call →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container" style="position:relative; z-index:2;">
+      <div class="hero-eyebrow">The Pinakam Delivery Engine</div>
+      <h1 style="font-family:var(--font-head); font-size:clamp(2.1rem,4vw,3.2rem); font-weight:800; max-width:760px; line-height:1.15; margin-bottom:18px;">
+        Proprietary Accelerators.<br/>
+        <span style="color:var(--cyan);">Not Another Tool to Maintain</span>.
+      </h1>
+      <p style="font-size:1.08rem; color:rgba(255,255,255,.76); max-width:680px; line-height:1.75; margin-bottom:32px;">
+        Enterprises don't need another standalone SaaS tool that leaves your engineers with a 6-month integration backlog.
+        The <strong>m-Platform</strong> is Pinakam's internal delivery suite — battle-tested operational harnesses that our
+        consultants deploy on Day 1 to accelerate delivery, enforce compliance, and deliver auditable ROAS.
+      </p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="#mdeploy" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(124,58,237,.2); color:#c4b5fd; border:1px solid rgba(124,58,237,.3);">mDeploy</a>
+        <a href="#moptimize" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(3,78,162,.2); color:#93c5fd; border:1px solid rgba(3,78,162,.3);">mOptimize</a>
+        <a href="#mscale" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(8,145,178,.2); color:#67e8f9; border:1px solid rgba(8,145,178,.3);">mScale</a>
+        <a href="#mprovision" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(5,150,105,.2); color:#6ee7b7; border:1px solid rgba(5,150,105,.3);">mProvision</a>
+        <a href="#mresilience" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(220,38,38,.2); color:#fca5a5; border:1px solid rgba(220,38,38,.3);">mResilience</a>
+        <a href="#mpulse" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(217,119,6,.2); color:#fcd34d; border:1px solid rgba(217,119,6,.3);">mPulse</a>
+        <a href="#mflow" style="padding:7px 16px; border-radius:20px; font-size:.8rem; font-weight:700; background:rgba(79,70,229,.2); color:#a5b4fc; border:1px solid rgba(79,70,229,.3);">mFlow</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCELERATOR HARNESS DETAILS -->
+  <div class="container">
+
+    <!-- 01: mDeploy -->
+    <div class="harness-detail" id="mdeploy">
+      <div class="harness-meta" style="--card-color: #7c3aed;">
+        <div class="harness-number">01</div>
+        <div class="harness-title"><span>m</span>Deploy</div>
+        <span class="harness-subtitle">Continuous Release & Zero-Downtime Agent Rollouts</span>
+        <p class="harness-summary">
+          Traditional CI/CD tools treat workloads like stateless HTTP endpoints. But if an AI agent is mid-flight in a
+          multi-step reasoning loop, an uncoordinated container swap destroys session state and corrupts vector store caches.
+          mDeploy provides session-aware rollouts that wait for safe agent checkpoints.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Installed during Month 2 of an FDE engagement once basic agent pipelines are built. Enables your engineering team to ship updates 5x faster with 0% session disruption.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Agent Checkpoint Awareness</h5>
+            <p>Monitors in-flight agent sessions and defers pod termination until current reasoning step finishes.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Automated Canary Traffic Splitting</h5>
+            <p>Rolls out new prompt templates or model versions to 5% of traffic and evaluates performance before full release.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Telemetry-Driven Rollback</h5>
+            <p>Instantly rolls back deployments if mPulse flags a spike in hallucinations or token latency.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Pipeline Version Control</h5>
+            <p>Maintains an immutable audit ledger of model weights, tool schemas, and agent DAG versions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02: mOptimize -->
+    <div class="harness-detail" id="moptimize">
+      <div class="harness-meta" style="--card-color: #034ea2;">
+        <div class="harness-number">02</div>
+        <div class="harness-title"><span>m</span>Optimize</div>
+        <span class="harness-subtitle">Token Cost Governance & Multi-Cloud FinOps</span>
+        <p class="harness-summary">
+          AI initiatives frequently stall when leadership discovers uncontrolled LLM token bills and over-provisioned GPU clusters.
+          mOptimize is our core cost engineering engine, tracking spend per agent, per tool call, and per business unit
+          to surface automated waste reduction recommendations.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Our opening diagnostic accelerator. Deployed on Day 1 to establish the auditable baseline required for our Return on Agent Spend (ROAS) gainshare contracts.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Per-Agent Token Attribution</h5>
+            <p>Decomposes LLM costs by prompt, completion, tool call, and user session in real time.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Automated Right-Sizing</h5>
+            <p>Identifies over-provisioned Kubernetes nodes, idle GPU instances, and unattached cloud storage.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Token Compiler Optimization</h5>
+            <p>Algorithms that trim redundant context windows and compress systemic prompt bloat by up to 70%.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Auditable ROAS Reporting</h5>
+            <p>Produces executive-ready dashboards showing verifiable dollar savings and agent productivity ROI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03: mScale -->
+    <div class="harness-detail" id="mscale">
+      <div class="harness-meta" style="--card-color: #0891b2;">
+        <div class="harness-number">03</div>
+        <div class="harness-title"><span>m</span>Scale</div>
+        <span class="harness-subtitle">Elastic Compute & GPU Inference Orchestration</span>
+        <p class="harness-summary">
+          Multi-agent workflows produce extreme compute burstiness: an agent query can trigger twenty concurrent sub-tasks.
+          mScale monitors queue depth and token consumption velocity to scale infrastructure proactively, eliminating
+          latency choke points while scaling compute to zero during idle periods.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Configured by our engineers when moving client AI systems from staging into production, ensuring SLA guarantees during peak business hours.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Queue-Velocity Autoscaling</h5>
+            <p>Scales node capacity based on agent execution queue dynamics rather than blunt CPU utilization metrics.</p>
+          </div>
+          <div class="capability-card">
+            <h5>GPU Node Pool Management</h5>
+            <p>Dynamically allocates specialized GPU instances for embeddings, re-ranking, and model inference.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Scale-to-Zero Efficiency</h5>
+            <p>Gracefully drains and decommissions idle compute pools during quiet hours to curb unnecessary burn.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Cold-Start Mitigation</h5>
+            <p>Maintains intelligent warm-pool caches so user-facing agent loops never hit container startup delays.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04: mProvision -->
+    <div class="harness-detail" id="mprovision">
+      <div class="harness-meta" style="--card-color: #059669;">
+        <div class="harness-number">04</div>
+        <div class="harness-title"><span>m</span>Provision</div>
+        <span class="harness-subtitle">Ephemeral Sandboxes & Infrastructure Automation</span>
+        <p class="harness-summary">
+          Testing AI agents requires safe environments with mocked databases, isolated vector stores, and private networks.
+          mProvision automates IaC manifests, allowing our consultants to spin up clean, policy-compliant staging, testing,
+          and production environments in under 60 seconds.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Eliminates the typical 3-month wait for enterprise cloud platform teams to provision infrastructure, letting our engineers start co-building on Day 3.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>60-Second Environment Spin-up</h5>
+            <p>Deploys complete VPCs, databases, Kafka clusters, and agent harnesses from single declarative templates.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Ephemeral PR Sandboxes</h5>
+            <p>Spins up temporary test sandboxes per GitHub pull request that automatically terminate on merge.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Policy-as-Code Baked In</h5>
+            <p>Enforces strict OPA/Rego security rules at the provisioning layer — non-compliant resources cannot be created.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Multi-Cloud IaC Backends</h5>
+            <p>Native compatibility with Terraform, Pulumi, AWS CDK, and Kubernetes Helm charts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05: mResilience -->
+    <div class="harness-detail" id="mresilience">
+      <div class="harness-meta" style="--card-color: #dc2626;">
+        <div class="harness-number">05</div>
+        <div class="harness-title"><span>m</span>Resilience</div>
+        <span class="harness-subtitle">Disaster Recovery & High Availability</span>
+        <p class="harness-summary">
+          Enterprise AI pipelines cannot tolerate data loss or silent failures. mResilience ensures high availability
+          across multi-agent networks through automated cross-region failover, snapshotting, and mid-flight
+          execution state recovery.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Deployed as part of our production hardening phase, validating that client systems meet mission-critical SLAs before going live to real users.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Agent State Checkpoint & Replay</h5>
+            <p>Persists reasoning step memory so disconnected workflows resume from the last valid step without re-billing tokens.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Cross-Region DNS & DB Failover</h5>
+            <p>Automated multi-region redundancy that routes traffic away from unhealthy availability zones in seconds.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Automated Chaos Validation</h5>
+            <p>Injects simulated network latency and API timeouts to prove resilience before incidents strike production.</p>
+          </div>
+          <div class="capability-card">
+            <h5>RTO & RPO SLA Monitoring</h5>
+            <p>Continuously audits data replication and restoration times to maintain compliance standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06: mPulse -->
+    <div class="harness-detail" id="mpulse">
+      <div class="harness-meta" style="--card-color: #d97706;">
+        <div class="harness-number">06</div>
+        <div class="harness-title"><span>m</span>Pulse</div>
+        <span class="harness-subtitle">Multi-Agent Telemetry & Telemetry Audit Stream</span>
+        <p class="harness-summary">
+          The operational nervous system of the Pinakam platform. mPulse captures distributed traces for every agent tool call,
+          model round-trip, latency percentile, and system metric — feeding actionable intelligence directly into our
+          consulting deliverables and automated alerts.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>The foundational harness. Installed within 48 hours of engagement kickoff to give client executives complete visibility into what their systems are actually doing.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Distributed Agent Tracing</h5>
+            <p>Visualizes complete call paths from user input through planner agent, tool invocation, and final response.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Hallucination & Error Alerting</h5>
+            <p>Detects anomalous tool failure rates or unexpected prompt drifts and routes alerts to on-call engineers.</p>
+          </div>
+          <div class="capability-card">
+            <h5>OpenTelemetry Native</h5>
+            <p>Zero vendor lock-in; exports clean metrics and spans directly to Datadog, Prometheus, Grafana, or CloudWatch.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Compliance Audit Trail</h5>
+            <p>Immutable logging of all agent actions for SOC2, HIPAA, and GDPR governance reviews.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07: mFlow -->
+    <div class="harness-detail" id="mflow">
+      <div class="harness-meta" style="--card-color: #4f46e5;">
+        <div class="harness-number">07</div>
+        <div class="harness-title"><span>m</span>Flow</div>
+        <span class="harness-subtitle">Durable Task & Workflow Orchestration Mesh</span>
+        <p class="harness-summary">
+          Inspired by Temporal's event-sourcing paradigm and durable execution primitives, mFlow provides a universal runtime
+          mesh for multi-step agent reasoning chains and asynchronous micro-tasks. Wrap any Python script, Go microservice,
+          CLI binary, or LLM prompt in a single lightweight task hook, and mFlow guarantees complete execution durability:
+          automatic retry with exponential backoff, state snapshots, zero lost workflows across process restarts, and
+          asynchronous human-in-the-loop signals.
+        </p>
+        <div class="engagement-context-box">
+          <h4>How We Deploy It in Engagements</h4>
+          <p>Deployed during agent pipeline hardening to replace fragile cron jobs, Celery queues, and custom retry logic with deterministic, auditable durable execution workflows.</p>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-head); font-size:1.15rem; font-weight:800; color:var(--slate-dark); margin-bottom:14px;">Harness Capabilities</h4>
+        <div class="capabilities-grid">
+          <div class="capability-card">
+            <h5>Event-Sourced State Persistence</h5>
+            <p>Every step, model interaction, and task state is immutably journaled. Crashed processes resume exactly where they paused.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Universal Task Hooks</h5>
+            <p>Non-invasive SDK decorator / hook to convert any standalone task, external API, or agent tool call into a durable activity.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Human-in-the-Loop Signals</h5>
+            <p>Workflows can sleep for minutes, days, or months awaiting human Slack/webhook approvals without consuming CPU or memory.</p>
+          </div>
+          <div class="capability-card">
+            <h5>Automatic Saga Compensation</h5>
+            <p>Built-in transaction rollback semantics ensure partial failures trigger idempotent compensation steps across multi-system actions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>See the Accelerators in Action on Your Stack</h2>
+    <p>
+      In a 30-minute discovery session, we'll demonstrate how our Forward Deployed Engineers use these harnesses
+      to eliminate boilerplate and deliver measurable cost and performance outcomes.
+    </p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white">Request Architecture Discovery Call →</a>
+      <a href="consulting.html" class="btn btn-ghost">Explore Consulting Practices</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-bottom" style="border:none; padding-top:0;">
+      <a href="index.html" class="logo-wrap" style="gap:8px;">
+        <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg></div>
+        <span class="logo-text" style="font-size:1.2rem;">PINAKA<span>M</span></span>
+      </a>
+      <span>© 2026 Pinakam Consulting · The m-Platform Accelerators · Production-First Advisory</span>
+    </div>
+  </footer>
+
+  <script>
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.boxShadow = window.scrollY > 12 ? '0 3px 20px rgba(0,0,0,.08)' : 'none';
+    });
+  </script>
+</body>
+</html>

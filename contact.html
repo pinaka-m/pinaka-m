@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Discovery Call — Pinakam Advisory</title>
+  <meta name="description" content="Schedule a 30-minute technical discovery call with a senior Pinakam practitioner to review your architecture, cloud costs, and production AI roadmap." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .contact-hero {
+      padding: calc(var(--nav-h) + 72px) 0 68px;
+      background: var(--slate-dark); color: var(--white);
+    }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; padding: 76px 0;
+    }
+    .contact-form-card {
+      background: var(--white); border: 1px solid var(--slate-border);
+      border-radius: var(--r-lg); padding: 42px; box-shadow: var(--shadow-md);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-label { display: block; font-size: .86rem; font-weight: 600; color: var(--slate-mid); margin-bottom: 6px; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; padding: 12px 14px;
+      background: var(--off-white); border: 1px solid var(--slate-border); border-radius: var(--r-sm);
+      font-family: var(--font-sans); font-size: .94rem; color: var(--slate-dark);
+      transition: var(--ease); outline: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--cobalt); background: var(--white);
+      box-shadow: 0 0 0 3px rgba(3,78,162,.1);
+    }
+    .form-textarea { min-height: 124px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; padding: 48px 0; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg>
+        </div>
+        <span class="logo-text">PINAKA<span>M</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="consulting.html">Consulting Practices</a></li>
+        <li><a href="accelerators.html">Proprietary Accelerators <span class="nav-badge">m-platform</span></a></li>
+        <li><a href="about.html">About & Depth</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:.86rem; padding:10px 22px;">Book Discovery Call →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="hero-eyebrow">Direct Engineering Access</div>
+      <h1 style="font-family:var(--font-head); font-size:clamp(1.9rem,3.6vw,2.9rem); font-weight:800; max-width:640px; margin-bottom:14px;">
+        Book Your Technical Discovery Session
+      </h1>
+      <p style="font-size:1.02rem; color:rgba(255,255,255,.72); max-width:560px; line-height:1.7;">
+        Connect directly with a senior Pinakam practitioner. In 30 minutes, we'll map your stack,
+        analyze your cloud and token spend, and outline a high-leverage execution plan.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT GRID -->
+  <div class="container contact-grid">
+
+    <!-- Left: What to Expect -->
+    <div>
+      <h2 style="font-family:var(--font-head); font-size:1.6rem; font-weight:800; color:var(--slate-dark); margin-bottom:18px;">
+        What to Expect
+      </h2>
+      <div style="display:flex; flex-direction:column; gap:22px; margin-bottom:40px;">
+        <div style="display:flex; gap:16px;">
+          <div style="width:38px; height:38px; border-radius:50%; background:var(--cobalt); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; font-size:.9rem;">1</div>
+          <div>
+            <strong style="color:var(--slate-dark); display:block; margin-bottom:4px;">Direct Technical Assessment</strong>
+            <span style="font-size:.88rem; color:var(--slate-muted);">You speak with an experienced systems engineer who understands production distributed systems — never a sales rep.</span>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px;">
+          <div style="width:38px; height:38px; border-radius:50%; background:var(--cobalt); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; font-size:.9rem;">2</div>
+          <div>
+            <strong style="color:var(--slate-dark); display:block; margin-bottom:4px;">Architecture & Cost Forensics</strong>
+            <span style="font-size:.88rem; color:var(--slate-muted);">We examine your current cloud architectures, LLM token consumption patterns, and compliance bottlenecks.</span>
+          </div>
+        </div>
+        <div style="display:flex; gap:16px;">
+          <div style="width:38px; height:38px; border-radius:50%; background:var(--cobalt); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0; font-size:.9rem;">3</div>
+          <div>
+            <strong style="color:var(--slate-dark); display:block; margin-bottom:4px;">Tailored Execution Roadmap</strong>
+            <span style="font-size:.88rem; color:var(--slate-muted);">Receive a concrete recommendation: whether a 2-Week Diagnostic Audit, Forward Deployed Engineering, or Fractional CTO guidance.</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--cobalt-pale); border:1px solid rgba(3,78,162,.18); border-radius:var(--r-md); padding:24px;">
+        <div style="font-size:.76rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--cobalt); margin-bottom:8px;">Direct Confidential Inquiries</div>
+        <a href="mailto:hello@pinakam.consulting" style="font-size:1.05rem; font-weight:700; color:var(--cobalt); display:block; margin-bottom:4px;">hello@pinakam.consulting</a>
+        <span style="font-size:.84rem; color:var(--slate-muted);">Global enterprise coverage · Responses within 24 hours across timezones</span>
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="contact-form-card">
+      <h3 style="font-family:var(--font-head); font-size:1.35rem; font-weight:800; color:var(--slate-dark); margin-bottom:24px;">
+        Schedule Your Technical Discovery Call
+      </h3>
+      <form onsubmit="event.preventDefault(); alert('Thank you! A senior Pinakam practitioner will contact you within 24 hours.');">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="Sarah" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Chen" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Corporate Email</label>
+          <input type="email" class="form-input" placeholder="sarah.chen@enterprise.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Organization & Scale</label>
+          <input type="text" class="form-input" placeholder="Acme Global Inc. (~250 Engineers)" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Primary Engagement Focus</label>
+          <select class="form-select">
+            <option>2-Week Rapid Architecture & FinOps Diagnostic</option>
+            <option>AI Agent Engineering & Production Harnessing</option>
+            <option>Durable Execution & Fault-Tolerant Workflows (mFlow)</option>
+            <option>Headless Control Plane & Policy Mesh (MCP)</option>
+            <option>FinOps: Cloud Bill & LLM Token Cost Reduction</option>
+            <option>Cloud Compliance: SOC2 / HIPAA / GDPR / EU AI Act</option>
+            <option>Forward Deployed Engineering (FDE) Retainer</option>
+            <option>Fractional CTO & Strategic Architecture Advisory</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current Architecture & Key Challenge</label>
+          <textarea class="form-textarea" placeholder="E.g., We are scaling an internal multi-agent pipeline on AWS EKS and Snowflake. We're concerned about runaway token spend, session crashes on redeploy, and preparing for an upcoming SOC2 Type II audit."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px; font-size:.98rem;">
+          Submit & Request Discovery Call →
+        </button>
+        <p style="text-align:center; font-size:.78rem; color:var(--slate-muted); margin-top:12px;">
+          Strict confidentiality. No marketing spam. Direct communication with senior practitioners.
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-bottom" style="border:none; padding-top:0;">
+      <a href="index.html" class="logo-wrap" style="gap:8px;">
+        <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg></div>
+        <span class="logo-text" style="font-size:1.2rem;">PINAKA<span>M</span></span>
+      </a>
+      <span>© 2026 Pinakam Consulting · Global Delivery · Enterprise-Grade Governance · Production-First</span>
+    </div>
+  </footer>
+
+  <script>
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.boxShadow = window.scrollY > 12 ? '0 3px 20px rgba(0,0,0,.08)' : 'none';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About & Engineering Depth — Pinakam Advisory</title>
+  <meta name="description" content="Pinakam is an elite AI consulting and engineering advisory firm founded by senior practitioners with 15+ years of experience across distributed systems, cloud operations, compliance, and AI agents." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero {
+      padding: calc(var(--nav-h) + 72px) 0 68px;
+      background: var(--slate-dark); color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 600px 400px at 90% 30%, rgba(237,6,119,.12) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 350px at 0% 70%,  rgba(3,78,162,.35) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .origin-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    .origin-text blockquote {
+      border-left: 3px solid var(--cobalt);
+      padding-left: 20px; margin: 24px 0;
+      font-size: 1.08rem; font-style: italic; color: var(--slate-mid); line-height: 1.7;
+    }
+    .origin-visual {
+      background: var(--slate-dark); border-radius: var(--r-xl); padding: 36px;
+      position: relative; overflow: hidden;
+    }
+    .origin-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 300px 200px at 80% 20%, rgba(0,192,243,.15) 0%, transparent 70%);
+    }
+    .timeline { display: flex; flex-direction: column; gap: 0; position: relative; z-index: 1; }
+    .timeline::before {
+      content: '';
+      position: absolute; left: 15px; top: 8px; bottom: 8px; width: 1px;
+      background: rgba(255,255,255,.1);
+    }
+    .tl-item { display: flex; gap: 18px; padding-bottom: 24px; }
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot {
+      width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .7rem; font-weight: 700; font-family: var(--font-mono);
+      background: var(--cobalt); color: var(--white); z-index: 1;
+      border: 2px solid var(--slate-dark);
+    }
+    .tl-content { padding-top: 4px; }
+    .tl-year { font-family: var(--font-mono); font-size: .68rem; font-weight: 700; color: var(--cyan); margin-bottom: 4px; }
+    .tl-title { font-size: .9rem; font-weight: 700; color: var(--white); margin-bottom: 3px; }
+    .tl-desc  { font-size: .78rem; color: rgba(255,255,255,.55); line-height: 1.5; }
+
+    .expertise-list { display: flex; flex-direction: column; gap: 18px; margin-top: 36px; }
+    .expertise-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .expertise-name { font-size: .9rem; font-weight: 600; color: var(--slate-dark); }
+    .expertise-years { font-family: var(--font-mono); font-size: .78rem; color: var(--cobalt); font-weight: 700; }
+    .bar-track { background: var(--off-white); border: 1px solid var(--slate-border); border-radius: 20px; height: 8px; overflow: hidden; }
+    .bar-fill {
+      height: 100%; border-radius: 20px; background: var(--cobalt);
+      width: 0; transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+    .value-card {
+      border: 1px solid var(--slate-border); border-radius: var(--r-md); padding: 30px 24px;
+      background: var(--white); transition: var(--ease);
+    }
+    .value-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .value-card:hover .value-icon {
+      background: var(--cobalt); color: var(--white);
+      transform: scale(1.06); box-shadow: 0 6px 18px rgba(3,78,162,.28);
+    }
+    .value-card:hover .value-icon svg {
+      stroke: var(--white);
+    }
+    .value-icon {
+      width: 48px; height: 48px; border-radius: var(--r-md);
+      background: var(--cobalt-pale); color: var(--cobalt);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; transition: var(--ease);
+    }
+    .value-icon svg {
+      width: 24px; height: 24px; stroke: var(--cobalt); fill: none;
+      stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+      transition: var(--ease);
+    }
+    .value-card h3 { font-family: var(--font-head); font-size: 1.15rem; font-weight: 800; color: var(--slate-dark); margin-bottom: 8px; }
+    .value-card p  { font-size: .88rem; color: var(--slate-muted); line-height: 1.65; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 48px; }
+    .why-card {
+      display: flex; gap: 16px; align-items: flex-start;
+      border: 1px solid var(--slate-border); border-radius: var(--r-md); padding: 26px;
+      background: var(--white); transition: var(--ease);
+    }
+    .why-card:hover { border-color: var(--cobalt); box-shadow: var(--shadow-sm); }
+    .why-num {
+      font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700;
+      color: var(--cobalt-pale); line-height: 1; flex-shrink: 0; min-width: 44px;
+    }
+    .why-card h4 { font-family: var(--font-head); font-size: 1.05rem; font-weight: 800; color: var(--slate-dark); margin-bottom: 6px; }
+    .why-card p  { font-size: .86rem; color: var(--slate-muted); line-height: 1.6; }
+
+    @media (max-width: 1024px) {
+      .origin-grid { grid-template-columns: 1fr; gap: 40px; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .values-grid, .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg>
+        </div>
+        <span class="logo-text">PINAKA<span>M</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="consulting.html">Consulting Practices</a></li>
+        <li><a href="accelerators.html">Proprietary Accelerators <span class="nav-badge">m-platform</span></a></li>
+        <li><a href="about.html" class="active">About & Depth</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:.86rem; padding:10px 22px;">Book Discovery Call →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container" style="position:relative; z-index:2;">
+      <div class="hero-eyebrow">Our Philosophy · Track Record · Founder Journey</div>
+      <h1 style="font-family:var(--font-head); font-size:clamp(2.1rem,4vw,3.2rem); font-weight:800; max-width:760px; line-height:1.15; margin-bottom:20px;">
+        Senior Engineers.<br/><span style="color:var(--cyan);">Battle-Tested Systems</span>.
+      </h1>
+      <p style="font-size:1.06rem; color:rgba(255,255,255,.76); max-width:640px; line-height:1.75; margin-bottom:32px;">
+        Pinakam was founded on a simple truth: enterprise AI initiatives don't fail due to lack of ambition or models.
+        They fail because of fragile operational scaffolding. We bring 15+ years of production scars across software,
+        cloud, QA, compliance, and AI systems to solve that exact problem.
+      </p>
+      <a href="#origin" class="btn btn-white">The Pinakam Story →</a>
+    </div>
+  </section>
+
+  <!-- ORIGIN & STORY -->
+  <section class="band" id="origin">
+    <div class="container origin-grid">
+      <div class="origin-text">
+        <span class="section-eyebrow">The Origin</span>
+        <h2 class="section-title">Precision, Power, and Mastery Over Complexity</h2>
+        <p style="font-size:.97rem; color:var(--slate-muted); line-height:1.8; margin-bottom:16px;">
+          The name <strong style="color:var(--slate-dark);">Pinakam</strong> is inspired by the divine bow in ancient mythology —
+          a legendary instrument of surgical precision, unstoppable power, and complete mastery over chaotic forces.
+          That ethos defines how we operate: we don't throw dozens of junior bodies at technical problems. We apply focused,
+          senior engineering precision.
+        </p>
+        <p style="font-size:.97rem; color:var(--slate-muted); line-height:1.8; margin-bottom:16px;">
+          Pinakam was founded by a senior engineering practitioner who spent 15+ years building and operating mission-critical
+          software, leading cloud operations across regulated global enterprises, and pioneering production agent systems.
+        </p>
+        <blockquote>
+          "Enterprises were pouring millions into AI prototypes that collapsed the moment they faced production traffic,
+          runaway token bills, or strict compliance audits. We built Pinakam to give engineering leaders an elite technical partner
+          that actually delivers working, governed systems."
+        </blockquote>
+        <p style="font-size:.97rem; color:var(--slate-muted); line-height:1.8;">
+          We pair that senior judgment with the <strong>m-Platform</strong> — internal delivery harnesses that eliminate
+          months of boilerplate infrastructure building.
+        </p>
+      </div>
+
+      <!-- Founder Journey Visual -->
+      <div class="origin-visual">
+        <div style="font-family:var(--font-mono); font-size:.72rem; font-weight:700; color:var(--cyan); text-transform:uppercase; letter-spacing:.1em; margin-bottom:24px;">
+          Practitioner Journey
+        </div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">01</div>
+            <div class="tl-content">
+              <div class="tl-year">Engineering Foundation</div>
+              <div class="tl-title">Software Development & QA Automation</div>
+              <div class="tl-desc">Full-stack distributed systems, continuous test automation, and resilient CI/CD pipelines across enterprise environments.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">02</div>
+            <div class="tl-content">
+              <div class="tl-year">Operational Scale</div>
+              <div class="tl-title">Cloud Operations & FinOps</div>
+              <div class="tl-desc">Multi-cloud architecture (AWS / Azure / GCP) at scale. Led cloud governance programs that eliminated millions in infrastructure waste.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">03</div>
+            <div class="tl-content">
+              <div class="tl-year">Enterprise Governance</div>
+              <div class="tl-title">Cloud Compliance & Security Architecture</div>
+              <div class="tl-desc">Policy-as-code automation and compliance governance across SOC2 Type II, ISO 27001, HIPAA, and GDPR environments globally.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">04</div>
+            <div class="tl-content">
+              <div class="tl-year">The AI Frontier</div>
+              <div class="tl-title">AI Systems & Agent Engineering</div>
+              <div class="tl-desc">Designing multi-agent harnesses, memory architectures, OPA policy sidecars, and Model Context Protocol (MCP) integrations in production.</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot">★</div>
+            <div class="tl-content">
+              <div class="tl-year">Today</div>
+              <div class="tl-title">Pinakam Consulting & The m-Platform</div>
+              <div class="tl-desc">Combining senior advisory with proprietary acceleration harnesses to deliver guaranteed, auditable enterprise outcomes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE DEPTH -->
+  <section class="band band-alt">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;">
+        <div>
+          <span class="section-eyebrow">Verified Practitioner Depth</span>
+          <h2 class="section-title">15+ Years Across the Full Engineering Stack</h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            We don't manage projects through abstract frameworks. Every recommendation we make is grounded in
+            thousands of hours spent designing architectures, operating production infrastructure, and debugging distributed failure modes.
+          </p>
+        </div>
+        <div class="expertise-list" id="expertise-bars">
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">Software Engineering & Architecture</span>
+              <span class="expertise-years">15+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="96"></div></div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">Cloud Operations & Infrastructure (AWS/Azure/GCP)</span>
+              <span class="expertise-years">12+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">QA Automation & Quality Engineering</span>
+              <span class="expertise-years">12+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">Enterprise Compliance (SOC2 / ISO / HIPAA / GDPR)</span>
+              <span class="expertise-years">10+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">FinOps & Cloud Cost Optimization</span>
+              <span class="expertise-years">8+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
+          </div>
+          <div class="expertise-item">
+            <div class="expertise-header">
+              <span class="expertise-name">AI Agent Orchestration & Systems Engineering</span>
+              <span class="expertise-years">3+ yrs</span>
+            </div>
+            <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="band">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Operating Principles</span>
+        <h2 class="section-title">What Governs Every Engagement</h2>
+      </div>
+
+      <div class="values-grid">
+
+        <!-- Value 1: Production or Nothing (The Arrow Tip / Bullseye) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Bullseye & Arrowhead — Production Precision">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4" stroke-width="1.6" />
+              <path d="M12 2V6" stroke-width="2" />
+              <path d="M12 18V22" stroke-width="2" />
+              <path d="M2 12H6" stroke-width="2" />
+              <path d="M18 12H22" stroke-width="2" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Production or Nothing</h3>
+          <p>
+            We don't deliver slideware or disconnected demo environments. Every engagement is judged on whether
+            it runs in production, withstands user load, and generates measurable value.
+          </p>
+        </div>
+
+        <!-- Value 2: Radical Simplicity (Pinaka Unstrung Bow & Straight Cord) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Minimalist Geometry — The Unwavering Line">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 21L21 3" stroke-width="2" />
+              <path d="M7 3H21V17" stroke-width="1.8" />
+              <circle cx="7" cy="17" r="2" stroke-width="1.6" />
+            </svg>
+          </div>
+          <h3>Radical Simplicity</h3>
+          <p>
+            Unnecessary architectural complexity is the leading cause of downtime and cost explosions.
+            We engineer the cleanest, most maintainable architecture that completely solves the problem.
+          </p>
+        </div>
+
+        <!-- Value 3: Telemetry Before Opinion (Third Eye / Sensor Aperture) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Third Eye / Deep Telemetry Lens">
+            <svg viewBox="0 0 24 24">
+              <path d="M2 12C4.5 7 9.5 4 12 4C14.5 4 19.5 7 22 12C19.5 17 14.5 20 12 20C9.5 20 4.5 17 2 12Z" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Telemetry Before Opinion</h3>
+          <p>
+            We don't guess at performance bottlenecks or cloud waste. We deploy <strong>mPulse</strong> within 48 hours
+            and let hard data direct every architectural decision and refactor.
+          </p>
+        </div>
+
+        <!-- Value 4: Leave Internal Teams Stronger (Grip of the Bow / Shared Mastery) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Joined Hands / Dual Archers — Team Empowerment">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 11C17.66 11 19 9.66 19 8C19 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11Z" stroke-width="1.8" />
+              <path d="M8 11C9.66 11 11 9.66 11 8C11 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11Z" stroke-width="1.8" />
+              <path d="M2 19C2 16.5 6 15 8 15C10 15 14 16.5 14 19" stroke-width="1.8" />
+              <path d="M14 19C14 16.8 17.5 15.5 19 15.5C20.5 15.5 22 16.5 22 19" stroke-width="1.8" />
+            </svg>
+          </div>
+          <h3>Leave Internal Teams Stronger</h3>
+          <p>
+            We refuse to create vendor dependency. Our Forward Deployed Engineers pair directly with your internal teams,
+            transferring technical ownership so you can comfortably operate and scale the system independently.
+          </p>
+        </div>
+
+        <!-- Value 5: Security & Governance by Design (Trishula Aegis) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Trishula Aegis — Impenetrable Governance">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L4 6V12C4 17.5 7.4 21.6 12 22C16.6 21.6 20 17.5 20 12V6L12 2Z" stroke-width="1.8" />
+              <path d="M12 7V16" stroke-width="1.8" />
+              <path d="M9 10C9 13 12 14 12 14C12 14 15 13 15 10" stroke-width="1.6" />
+            </svg>
+          </div>
+          <h3>Security & Governance by Design</h3>
+          <p>
+            Compliance is not an afterthought added before an audit. We bake security policy-as-code directly into IaC
+            and agent harnesses from Day 1 to satisfy global enterprise standards.
+          </p>
+        </div>
+
+        <!-- Value 6: Incentives Aligned to ROAS (Chandra Balance Scale) -->
+        <div class="value-card fade-up">
+          <div class="value-icon" title="Chandra & Balance — Aligned Value">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3V21" stroke-width="2" />
+              <path d="M5 7L12 5L19 7" stroke-width="1.8" />
+              <path d="M3 13C3 15.5 5 17 7 17C9 17 11 15.5 11 13H3Z" stroke-width="1.6" />
+              <path d="M13 13C13 15.5 15 17 17 17C19 17 21 15.5 21 13H13Z" stroke-width="1.6" />
+              <circle cx="12" cy="5" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Incentives Aligned to ROAS</h3>
+          <p>
+            We tie our commercial success to measurable outcomes — Return on Agent Spend (ROAS).
+            If our engagements don't deliver documented dollar savings or operational acceleration, we don't succeed.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PINAKAM -->
+  <section class="band band-alt">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">The Competitive Difference</span>
+        <h2 class="section-title">Why Engineering Leaders Partner With Pinakam</h2>
+        <p class="section-sub" style="margin:0 auto;">
+          How we compare against generic body shops and tool vendors.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-num">01</div>
+          <div>
+            <h4>Engineers, Not Sales Reps</h4>
+            <p>Every conversation you have is with a senior practitioner who has built and operated high-scale production systems — not an account executive pitching from a generic slide deck.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">02</div>
+          <div>
+            <h4>Proprietary Accelerators (m-Platform)</h4>
+            <p>We don't charge you hourly to reinvent boilerplate CI/CD, telemetry, or IaC. Our consultants bring pre-built, battle-tested harnesses that compress time-to-production by up to 70%.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">03</div>
+          <div>
+            <h4>Global Enterprise Governance</h4>
+            <p>We architect systems designed from the start to meet the world's most stringent security and privacy regulations: SOC2 Type II, ISO 27001, HIPAA, GDPR, and the EU AI Act.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">04</div>
+          <div>
+            <h4>Auditable Value, Not Vague Promises</h4>
+            <p>Every engagement produces verifiable telemetry showing exact dollar savings, token compression ratios, and accelerated release velocity. We show our math in hard numbers.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">05</div>
+          <div>
+            <h4>Full-Lifecycle Mastery</h4>
+            <p>From initial architecture blueprints through IaC provisioning, QA evaluation, multi-agent orchestration, and production SRE — we cover the complete engineering lifecycle.</p>
+          </div>
+        </div>
+        <div class="why-card">
+          <div class="why-num">06</div>
+          <div>
+            <h4>Small, Elite Strike Teams</h4>
+            <p>We deliberately maintain a boutique, senior-heavy engineering structure. The senior practitioners you evaluate during kickoff are the exact engineers who co-build your systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Ready to Partner With Practitioners Who Ship?</h2>
+    <p>
+      Book a 30-minute discovery call with a senior Pinakam engineer.
+      No sales presentations — just a focused technical discussion about your infrastructure and AI priorities.
+    </p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white">Book Technical Discovery Call →</a>
+      <a href="consulting.html" class="btn btn-ghost">View Practice Areas</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-bottom" style="border:none; padding-top:0;">
+      <a href="index.html" class="logo-wrap" style="gap:8px;">
+        <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg></div>
+        <span class="logo-text" style="font-size:1.2rem;">PINAKA<span>M</span></span>
+      </a>
+      <span>© 2026 Pinakam Consulting · Global Delivery · Enterprise-Grade Governance · Production-First</span>
+    </div>
+  </footer>
+
+  <script>
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.boxShadow = window.scrollY > 12 ? '0 3px 20px rgba(0,0,0,.08)' : 'none';
+    });
+
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const fadeIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => fadeIO.observe(el));
+
+    const barIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.querySelectorAll('.bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.width + '%';
+        });
+        barIO.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+    const barsSection = document.getElementById('expertise-bars');
+    if (barsSection) barIO.observe(barsSection);
+  </script>
+</body>
+</html>

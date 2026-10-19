@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinakam — Elite AI Systems & Cloud Operations Advisory</title>
+  <meta name="description" content="Pinakam is an elite AI consulting and engineering advisory firm. We architect, harden, and operate production AI systems and cloud infrastructure — powered by our proprietary m-Platform accelerators." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ NAVIGATION ══════════════════ -->
+  <nav id="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg>
+        </div>
+        <span class="logo-text">PINAKA<span>M</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="consulting.html">Consulting Practices</a></li>
+        <li>
+          <a href="accelerators.html">
+            Proprietary Accelerators
+            <span class="nav-badge">m-platform</span>
+          </a>
+        </li>
+        <li><a href="about.html">About & Depth</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary" style="font-size:.86rem; padding:10px 22px;">
+          Book Discovery Call →
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════ HERO SECTION ══════════════════ -->
+  <section class="hero">
+    <div class="container hero-inner">
+
+      <!-- Left Column: High-Stakes Advisory Positioning -->
+      <div>
+        <div class="hero-eyebrow">Enterprise Advisory · Forward Deployed Engineering · FinOps</div>
+        <h1 class="hero-h1">
+          High-Stakes AI Systems.<br/>
+          Built for <em>Production</em>.
+        </h1>
+        <p class="hero-sub">
+          Pinakam is an elite engineering advisory firm. We don't sell self-serve software subscriptions or high-level slide decks.
+          Our Forward Deployed Engineers embed directly with your teams to architect, harden, and operate resilient AI control planes —
+          powered by our battle-tested <strong>m-Platform</strong> proprietary delivery harnesses.
+        </p>
+        <div class="hero-actions">
+          <a href="consulting.html" class="btn btn-white">Explore Consulting Practices →</a>
+          <a href="accelerators.html" class="btn btn-ghost">Our Proprietary IP (m-Platform)</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Proprietary Delivery Engine (The m-Harnesses) -->
+      <div class="hero-visual">
+        <div class="hero-visual-header">
+          <span class="hero-visual-title">The Pinakam Delivery Engine</span>
+          <span class="hero-visual-pill">Proprietary IP</span>
+        </div>
+        <p style="font-size:.78rem; color:rgba(255,255,255,.62); margin-bottom:14px; line-height:1.5;">
+          Harnesses deployed on Day 1 by our consultants to compress a 9-month build into 3 weeks:
+        </p>
+
+        <div class="harness-stack">
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--deploy-color);"></span>
+            <span class="harness-name">mDeploy</span>
+            <span class="harness-desc">Checkpoint-aware release harness for multi-agent loops</span>
+            <span class="harness-tag" style="background:rgba(124,58,237,.15); color:#c4b5fd;">Release</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--optimize-color);"></span>
+            <span class="harness-name">mOptimize</span>
+            <span class="harness-desc">Autonomous token governance & cloud FinOps engine</span>
+            <span class="harness-tag" style="background:rgba(3,78,162,.15); color:#93c5fd;">FinOps</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--scale-color);"></span>
+            <span class="harness-name">mScale</span>
+            <span class="harness-desc">Agent workload compute balancing & GPU scheduling</span>
+            <span class="harness-tag" style="background:rgba(8,145,178,.15); color:#67e8f9;">Elastic</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--provision-color);"></span>
+            <span class="harness-name">mProvision</span>
+            <span class="harness-desc">Ephemeral AI sandboxes & automated IaC environments</span>
+            <span class="harness-tag" style="background:rgba(5,150,105,.15); color:#6ee7b7;">IaC</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--resilience-color);"></span>
+            <span class="harness-name">mResilience</span>
+            <span class="harness-desc">Disaster recovery, automated failover & state checkpointing</span>
+            <span class="harness-tag" style="background:rgba(220,38,38,.15); color:#fca5a5;">DR/HA</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--pulse-color);"></span>
+            <span class="harness-name">mPulse</span>
+            <span class="harness-desc">Real-time agent telemetry, audit trail & SLO alerting</span>
+            <span class="harness-tag" style="background:rgba(217,119,6,.15); color:#fcd34d;">Telemetry</span>
+          </div>
+          <div class="harness-row">
+            <span class="harness-dot" style="background:var(--flow-color);"></span>
+            <span class="harness-name">mFlow</span>
+            <span class="harness-desc">Durable workflow engine & universal task mesh</span>
+            <span class="harness-tag" style="background:rgba(79,70,229,.15); color:#a5b4fc;">Durable</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════ STATS / CREDIBILITY BAR ══════════════════ -->
+  <div class="stats-bar">
+    <div class="container stats-inner">
+      <div class="stat-item">
+        <span class="stat-num" data-target="15">0</span>
+        <div class="stat-label">Years of Production Engineering Depth</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-prefix="$" data-suffix="M+" data-target="7">0</span>
+        <div class="stat-label">Documented Cloud Spend Eliminated</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-prefix="~" data-suffix="%" data-target="70">0</span>
+        <div class="stat-label">Average LLM Token Waste Slashed</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="7">0</span>
+        <div class="stat-label">Proprietary m-Harnesses Deployed</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ POSITIONING: CONSULTING VS DEVTOOLS ══════════════════ -->
+  <section class="band">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Strategic Model</span>
+        <h2 class="section-title">Why Enterprises Hire Pinakam Instead of Buying More DevTools</h2>
+        <p class="section-sub" style="margin: 0 auto;">
+          The enterprise problem is rarely a shortage of developer tools. It is the architectural complexity
+          of wiring them into a secure, cost-governed, production-ready system.
+        </p>
+      </div>
+
+      <div class="position-banner">
+        <div class="position-grid">
+          <div class="position-card">
+            <h4 style="color:#f87171;">✕ The DevTool & Generic Agency Trap</h4>
+            <p>
+              Off-the-shelf software vendors sell seat licenses that dump all implementation risk onto your engineering teams.
+              Meanwhile, legacy consulting body shops bill hourly to re-invent generic scaffolding from scratch, taking 9 months to produce brittle prototypes that fail in production.
+            </p>
+          </div>
+
+          <div class="position-card highlight">
+            <h4 style="color:var(--cyan);">✓ The Pinakam Engineering Model</h4>
+            <p>
+              We pair senior practitioner advisory with our proprietary <strong>m-Platform accelerators</strong>.
+              Our Forward Deployed Engineers embed with your team, deploy battle-tested infrastructure harnesses on Day 1,
+              and tie our commercial success to auditable business outcomes (Return on Agent Spend — ROAS).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CONSULTING PRACTICES ══════════════════ -->
+  <section class="band band-alt" id="practices">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Core Practice Areas</span>
+        <h2 class="section-title">Engineering Advisory Tailored for Modern Stacks</h2>
+        <p class="section-sub" style="margin: 0 auto;">
+          From board-level architecture strategy to hands-on agent orchestration and cloud modernization.
+        </p>
+      </div>
+
+      <!-- ═══════════ CORE PRACTICE AREAS: BENTO GRID ═══════════ -->
+      <div class="bento-grid">
+
+        <!-- Practice 1: AI Agent Engineering (Hero Bento Card - Spans 2 Cols) -->
+        <div class="consulting-card bento-card-featured fade-up">
+          <span class="bento-badge-tag">★ Flagship Advisory Practice</span>
+          <div class="bento-card-inner">
+            <div>
+              <div class="consulting-icon" title="Pinaka Bow & Arrow — Targeted Agent Execution">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 19C4 11 11 4 19 4" stroke-width="2" />
+                  <path d="M4 19L19 4" stroke-width="1.8" />
+                  <path d="M19 4H14" stroke-width="2" />
+                  <path d="M19 4V9" stroke-width="2" />
+                  <circle cx="9" cy="9" r="1.5" fill="currentColor" />
+                  <path d="M2 21L5 18" stroke-width="2" />
+                </svg>
+              </div>
+              <h3>AI Agent Engineering & Harnessing</h3>
+              <p>
+                Architect, harden, and deploy production multi-agent systems. We build complete operational harnesses:
+                session memory layers, tool registries, human-in-the-loop (HITL) approval gates, and deterministic policy boundaries.
+              </p>
+              <div class="accelerator-tag">
+                Accelerated by <strong>mPulse</strong> & <strong>mDeploy</strong>
+              </div>
+            </div>
+            <ul class="bento-highlights">
+              <li>In-Flight Memory & Vector State Hydration</li>
+              <li>Deterministic Tool Policy Boundaries (OPA)</li>
+              <li>Human-in-the-Loop (HITL) Approval Gates</li>
+              <li>Zero-Downtime Session Checkpoint Replay</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Practice 2: Headless Control Plane (1 Col) -->
+        <div class="consulting-card fade-up">
+          <div class="consulting-icon" title="Trishula — Three-Fold Control Plane & Policy Mesh">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2V22" stroke-width="2" />
+              <path d="M6 5C6 11 12 13 12 13C12 13 18 11 18 5" stroke-width="1.8" />
+              <path d="M6 5V2" stroke-width="1.8" />
+              <path d="M18 5V2" stroke-width="1.8" />
+              <circle cx="12" cy="18" r="2" stroke-width="1.6" />
+            </svg>
+          </div>
+          <h3>Headless Control Plane & Policy Mesh</h3>
+          <p>
+            As software transitions to the Headless Era via MCP (Model Context Protocol), we deploy session-inherited
+            JWT RBAC connectors and OPA/Rego sidecar circuit breakers to govern agent actions across enterprise APIs.
+          </p>
+          <div class="accelerator-tag">
+            Accelerated by <strong>mPulse</strong> & <strong>mOptimize</strong>
+          </div>
+        </div>
+
+        <!-- Practice 3: Cloud Compliance (1 Col) -->
+        <div class="consulting-card fade-up">
+          <div class="consulting-icon" title="Kavacha Shield & Third Eye — All-Seeing Governance">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22S4 18 4 12V5L12 2L20 5V12C20 18 12 22 12 22Z" stroke-width="1.8" />
+              <path d="M8 12C9.5 9.8 14.5 9.8 16 12C14.5 14.2 9.5 14.2 8 12Z" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="1.3" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Cloud Compliance & Governance</h3>
+          <p>
+            Embed security policy-as-code directly into your IaC pipelines. Rigorous readiness for global enterprise
+            standards including SOC2 Type II, ISO 27001, HIPAA, GDPR, and the EU AI Act.
+          </p>
+          <div class="accelerator-tag">
+            Accelerated by <strong>mProvision</strong> & <strong>mPulse</strong>
+          </div>
+        </div>
+
+        <!-- Practice 4: FinOps (1 Col) -->
+        <div class="consulting-card fade-up">
+          <div class="consulting-icon" title="Chandra Crescent & Balance — FinOps Equilibrium">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 3C8 4 4 9 4 15C4 18.5 6 21 9 22C6.5 19 6.5 13 11 8.5C13 6.5 15.5 5.5 18 5C17 3.8 15.6 3.2 14 3Z" stroke-width="1.8" />
+              <path d="M12 13L21 13" stroke-width="1.8" />
+              <path d="M18 10L21 13L18 16" stroke-width="1.8" />
+              <circle cx="12" cy="13" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>FinOps & Cloud Cost Optimization</h3>
+          <p>
+            Deconstruct runaway cloud bills and token consumption. We execute aggressive right-sizing, reserved capacity strategy,
+            and token compiler optimizations to reduce compute and inference spend by 30–50% within 60 days.
+          </p>
+          <div class="accelerator-tag">
+            Accelerated by <strong>mOptimize</strong> & <strong>mScale</strong>
+          </div>
+        </div>
+
+        <!-- Practice 5: QA Modernization (1 Col) -->
+        <div class="consulting-card fade-up">
+          <div class="consulting-icon" title="Damaru Rhythm / Stochastic Signal Verifier">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 4H19L14 12L19 20H5L10 12L5 4Z" stroke-width="1.8" />
+              <path d="M10 12H14" stroke-width="2" />
+              <circle cx="12" cy="12" r="1" fill="currentColor" />
+              <circle cx="12" cy="7" r="1.5" fill="currentColor" />
+              <circle cx="12" cy="17" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>QA Modernization & Agent Evaluation</h3>
+          <p>
+            Shift-left quality engineering for modern pipelines. We establish automated testing for non-deterministic AI behaviour —
+            hallucination detection, regression baselines, tool correctness, and CI/CD quality gates.
+          </p>
+          <div class="accelerator-tag">
+            Accelerated by <strong>mDeploy</strong> & <strong>mPulse</strong>
+          </div>
+        </div>
+
+        <!-- Practice 6: Stack Modernization (1 Col) -->
+        <div class="consulting-card fade-up">
+          <div class="consulting-icon" title="Agni Flame — Architectural Metamorphosis & Rebirth">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C9 7 6 10 6 14C6 17.5 8.7 20.5 12 21C15.3 20.5 18 17.5 18 14C18 9 13.5 5.5 12 2Z" stroke-width="1.8" />
+              <path d="M12 12C10.8 14 10.5 15.5 11 17C12 17.5 13 17 13.5 16C14 14.5 13 13 12 12Z" fill="currentColor" />
+            </svg>
+          </div>
+          <h3>Stack Modernization & Fractional CTO</h3>
+          <p>
+            Safe, incremental strangler-fig migrations from legacy monoliths to cloud-native microservices.
+            Senior fractional CTO leadership to align technical roadmap with enterprise business goals.
+          </p>
+          <div class="accelerator-tag">
+            Accelerated by <strong>mProvision</strong> & <strong>mDeploy</strong>
+          </div>
+        </div>
+
+        <!-- Practice 7: Durable Execution (Hero Bento Card - Spans 2 Cols) -->
+        <div class="consulting-card bento-card-featured fade-up">
+          <span class="bento-badge-tag" style="background:rgba(79,70,229,.1); color:#4f46e5;">⚡ Core Runtime Infrastructure</span>
+          <div class="bento-card-inner">
+            <div>
+              <div class="consulting-icon" title="Ananta / Infinity Loop — Uninterrupted Durable Execution">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18.178 8C19.78 8 21 9.22 21 12C21 14.78 19.78 16 18.178 16C15.866 16 14.134 8 11.822 8C10.22 8 9 9.22 9 12C9 14.78 10.22 16 11.822 16" stroke-width="1.8" />
+                  <path d="M5.822 16C4.22 16 3 14.78 3 12C3 9.22 4.22 8 5.822 8C8.134 8 9.866 16 12.178 16" stroke-width="1.8" />
+                  <circle cx="5.8" cy="12" r="1.5" fill="currentColor" />
+                  <circle cx="18.2" cy="12" r="1.5" fill="currentColor" />
+                  <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3>Durable Execution & State Machines</h3>
+              <p>
+                Architect event-sourced, fault-tolerant state machines for multi-step AI reasoning and mission-critical cloud pipelines.
+                In-flight workflows sleep, pause for human approval, and resume effortlessly after crashes.
+              </p>
+              <div class="accelerator-tag">
+                Accelerated by <strong>mFlow</strong> & <strong>mResilience</strong>
+              </div>
+            </div>
+            <ul class="bento-highlights">
+              <li>Event-Sourced Durable State Persistence</li>
+              <li>Universal Task Hooks for Any Script or API</li>
+              <li>Asynchronous HITL Signal & Sleep Gates</li>
+              <li>Automatic Distributed Saga Compensation</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center" style="margin-top: 44px;">
+        <a href="consulting.html" class="btn btn-primary">Detailed Consulting Practice Breakdown →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ PROPRIETARY ACCELERATORS BRIDGE ══════════════════ -->
+  <section class="band" id="accelerators">
+    <div class="container">
+      <div class="delivery-engine-banner fade-up">
+        <div class="delivery-engine-left">
+          <span class="section-eyebrow" style="color:var(--cyan); margin-bottom:8px;">The Pinakam Unfair Advantage</span>
+          <h2 style="font-family:var(--font-head); font-size:clamp(1.9rem,3.2vw,2.5rem); font-weight:800; color:var(--white); line-height:1.2; margin-bottom:16px;">
+            Seven Proprietary Accelerators.<br/>
+            <span style="color:var(--cyan);">Zero Reinvented Wheels.</span>
+          </h2>
+          <p style="font-size:1.02rem; color:rgba(255,255,255,.8); line-height:1.75; margin-bottom:28px; max-width:560px;">
+            Traditional consultancies charge you by the hour to build commodity boilerplate from scratch.
+            Pinakam Forward Deployed Engineers deploy our <strong>m-Platform</strong> harnesses directly into your cloud
+            on Day 1 — eliminating 6+ months of infrastructure overhead and guaranteeing auditable Return on Agent Spend (ROAS).
+          </p>
+          <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center;">
+            <a href="accelerators.html" class="btn btn-primary" style="background:var(--cyan); color:var(--slate-dark); font-weight:700; border-color:var(--cyan); padding:13px 26px;">
+              Explore the 7 Proprietary Accelerators →
+            </a>
+            <span style="font-size:.82rem; color:rgba(255,255,255,.6);">Production-tested harnesses · Full IP transfer to your repo</span>
+          </div>
+        </div>
+
+        <div class="delivery-engine-right">
+          <div class="engine-pills-grid">
+            <a href="accelerators.html#mdeploy" class="engine-pill" style="--pill-color:#7c3aed;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mDeploy</strong>
+                <span>Continuous Agent Rollout & Checkpoint Awareness</span>
+              </div>
+            </a>
+            <a href="accelerators.html#mflow" class="engine-pill" style="--pill-color:#4f46e5;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mFlow</strong>
+                <span>Durable Workflows, State Machines & Task Mesh</span>
+              </div>
+            </a>
+            <a href="accelerators.html#moptimize" class="engine-pill" style="--pill-color:#034ea2;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mOptimize</strong>
+                <span>Token FinOps, Spend Forensics & ROAS Baseline</span>
+              </div>
+            </a>
+            <a href="accelerators.html#mscale" class="engine-pill" style="--pill-color:#0891b2;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mScale</strong>
+                <span>Dynamic GPU & Compute Fleet Autoscaling</span>
+              </div>
+            </a>
+            <a href="accelerators.html#mprovision" class="engine-pill" style="--pill-color:#059669;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mProvision</strong>
+                <span>60s Agent Sandbox & Ephemeral IaC Environments</span>
+              </div>
+            </a>
+            <a href="accelerators.html#mresilience" class="engine-pill" style="--pill-color:#dc2626;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mResilience</strong>
+                <span>Cross-Region Failover & Mid-Flight State Replay</span>
+              </div>
+            </a>
+            <a href="accelerators.html#mpulse" class="engine-pill" style="--pill-color:#d97706;">
+              <span class="pill-dot"></span>
+              <div>
+                <strong>mPulse</strong>
+                <span>Distributed Agent Tracing & Telemetry Audit Stream</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ ENGAGEMENT MODELS ══════════════════ -->
+  <section class="band band-alt" id="models">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Enterprise Engagement Framework</span>
+        <h2 class="section-title">How Senior Leaders Partner with Pinakam</h2>
+        <p class="section-sub" style="margin: 0 auto;">
+          Predictable structures tailored for enterprise scale, risk mitigation, and rapid execution.
+        </p>
+      </div>
+
+      <div class="engagement-stack">
+
+        <!-- Tier 1 -->
+        <div class="tier-card fade-up">
+          <span class="tier-tag">Rapid Diagnostic</span>
+          <h3>2-Week Architecture & FinOps Audit</h3>
+          <p>
+            We instrument your infrastructure with <strong>mPulse</strong> and <strong>mOptimize</strong> within 48 hours.
+            Over two weeks, senior engineers analyze your bottlenecks, token waste, and compliance gaps.
+          </p>
+          <ul class="tier-list">
+            <li>Full cloud bill forensics & token waste analysis</li>
+            <li>AI agent readiness & security review</li>
+            <li>Prioritized 90-day execution roadmap</li>
+            <li>Documented ROAS baseline projection</li>
+          </ul>
+          <span class="tier-cadence">2 Weeks · Fixed Scope Diagnostic</span>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="tier-card featured fade-up">
+          <span class="tier-tag">Core Delivery Model</span>
+          <h3>Forward Deployed Engineering (FDE)</h3>
+          <p>
+            A senior Pinakam engineering strike team embeds directly inside your organization to architect,
+            co-build, and harden your AI systems, deploying the relevant m-Platform accelerators on Day 1.
+          </p>
+          <ul class="tier-list">
+            <li>End-to-end agent orchestration & policy mesh build</li>
+            <li>Production cloud infrastructure & CI/CD deployment</li>
+            <li>Continuous knowledge transfer to internal engineers</li>
+            <li>Commercial gainshare tied to documented ROAS</li>
+          </ul>
+          <span class="tier-cadence">3–6 Months · Outcome-Driven Retainer</span>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="tier-card fade-up">
+          <span class="tier-tag">Long-Term Governance</span>
+          <h3>Fractional CTO & SRE Retainer</h3>
+          <p>
+            Continuous architectural guidance, high-availability monitoring, and disaster recovery leadership
+            for organizations scaling complex AI systems in production.
+          </p>
+          <ul class="tier-list">
+            <li>Executive technical roadmap advisory</li>
+            <li>Quarterly FinOps & compliance audits</li>
+            <li>On-call SRE escalation for critical pipelines</li>
+            <li>Architecture board participation</li>
+          </ul>
+          <span class="tier-cadence">Monthly Retainer · Flexible Advisory</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ CTA BAND ══════════════════ -->
+  <section class="cta-band">
+    <h2>Ready to Architect Production AI That Delivers?</h2>
+    <p>
+      Book a 30-minute technical discovery call with a senior Pinakam practitioner.
+      We'll review your architecture, assess your cloud and agent spend, and identify high-leverage opportunities.
+    </p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white">Book Technical Discovery Call →</a>
+      <a href="consulting.html" class="btn btn-ghost">View Practice Areas</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="logo-wrap">
+            <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M19 5h-6M19 5v6" /><path d="M3 21l3-3" stroke-width="2.5" /></svg></div>
+            <span class="logo-text">PINAKA<span>M</span></span>
+          </a>
+          <p>
+            Elite AI Systems Engineering & Cloud Operations Advisory.
+            Proprietary m-Platform Accelerators. Auditable Return on Agent Spend (ROAS).
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Consulting Practices</h4>
+          <ul>
+            <li><a href="consulting.html#agent-engineering">AI Agent Engineering</a></li>
+            <li><a href="consulting.html#headless-architecture">Headless Control Plane</a></li>
+            <li><a href="consulting.html#cloud-compliance">Cloud Compliance & Security</a></li>
+            <li><a href="consulting.html#finops">FinOps & Cost Optimization</a></li>
+            <li><a href="consulting.html#qa-testing">QA & Agent Evaluation</a></li>
+            <li><a href="consulting.html#modernization">Stack Modernization</a></li>
+            <li><a href="consulting.html#durable-execution">Durable Execution</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>The m-Platform</h4>
+          <ul>
+            <li><a href="accelerators.html#mdeploy">mDeploy (Release)</a></li>
+            <li><a href="accelerators.html#moptimize">mOptimize (FinOps)</a></li>
+            <li><a href="accelerators.html#mscale">mScale (Compute)</a></li>
+            <li><a href="accelerators.html#mprovision">mProvision (IaC)</a></li>
+            <li><a href="accelerators.html#mresilience">mResilience (DR/HA)</a></li>
+            <li><a href="accelerators.html#mpulse">mPulse (Telemetry)</a></li>
+            <li><a href="accelerators.html#mflow">mFlow (Durable Workflows)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Firm</h4>
+          <ul>
+            <li><a href="about.html">About Pinakam</a></li>
+            <li><a href="about.html#values">Operating Principles</a></li>
+            <li><a href="contact.html">Book Discovery Call</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Pinakam Consulting. All rights reserved.</span>
+        <span>Global Delivery · Enterprise-Grade Governance · Production-First</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════ SCRIPTS ══════════════════ -->
+  <script>
+    // Fade-in on scroll
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeEls.forEach(el => io.observe(el));
+
+    // Animated numerical counters
+    const counters = document.querySelectorAll('[data-target]');
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = parseInt(el.dataset.target, 10);
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '+';
+        let current = 0;
+        const step = Math.max(1, Math.ceil(target / 35));
+        const interval = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = prefix + current + suffix;
+          if (current >= target) clearInterval(interval);
+        }, 40);
+        cio.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => cio.observe(c));
+
+    // Sticky nav shadow
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.boxShadow = window.scrollY > 12 ? '0 3px 20px rgba(0,0,0,.08)' : 'none';
+    });
+  </script>
+
+</body>
+</html>
